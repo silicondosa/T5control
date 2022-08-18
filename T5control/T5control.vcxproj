@@ -109,10 +109,12 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\tyros\codebase\T5control\include;C:\Users\tyros\codebase\T5control\lib\quickDAQ\include;C:\Users\tyros\codebase\T5control\lib\NI-DAQmx\include;C:\Users\tyros\codebase\T5control\lib\clinkedlist\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\tyros\codebase\T5control\lib\quickDAQ\bin;C:\Users\tyros\codebase\T5control\lib\NI-DAQmx;C:\Users\tyros\codebase\T5control\lib\clinkedlist;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -148,12 +150,14 @@
       <SDLCheck>true</SDLCheck>
       <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>C:\Users\tyros\codebase\T5control\include;C:\Users\tyros\codebase\T5control\lib\quickDAQ\include;C:\Users\tyros\codebase\T5control\lib\NI-DAQmx\include;C:\Users\tyros\codebase\T5control\lib\clinkedlist\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
       <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\tyros\codebase\T5control\lib\quickDAQ\bin;C:\Users\tyros\codebase\T5control\lib\NI-DAQmx;C:\Users\tyros\codebase\T5control\lib\clinkedlist;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
@@ -166,18 +170,10 @@
     <ClInclude Include="..\lib\clinkedlist\include\macrodef.h" />
     <ClInclude Include="..\lib\NI-DAQmx\include\ansi_c.h" />
     <ClInclude Include="..\lib\NI-DAQmx\include\NIDAQmx.h" />
-    <ClInclude Include="..\lib\quickDAQ\include\msunistd.h" />
-    <ClInclude Include="..\lib\quickDAQ\include\quickDAQ.h" />
-    <ClInclude Include="..\lib\quickDAQ\include\stdafx.h" />
-    <ClInclude Include="..\lib\quickDAQ\include\targetver.h" />
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\lib\clinkedlist\cLinkedList.lib" />
     <Library Include="..\lib\NI-DAQmx\NIDAQmx.lib" />
-    <Library Include="..\lib\quickDAQ\bin\quickDAQ.lib" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="..\lib\quickDAQ\bin\quickDAQ.pdb" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
