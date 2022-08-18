@@ -1,3 +1,6 @@
 [submodule "lib/quickDAQ"]
 	path = lib/quickDAQ
 	url = git@github.com:solaremperor/quickDAQ.git
+[submodule "lib/MiniPID"]
+	path = lib/MiniPID
+	url = git@github.com:solaremperor/MiniPID.git
