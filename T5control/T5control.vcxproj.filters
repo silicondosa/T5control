@@ -38,9 +38,25 @@
     <ClInclude Include="..\lib\NI-DAQmx\include\NIDAQmx.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="..\lib\quickDAQ\include\msunistd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\quickDAQ\include\quickDAQ.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\quickDAQ\include\stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\lib\quickDAQ\include\targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Library Include="..\lib\clinkedlist\cLinkedList.lib" />
     <Library Include="..\lib\NI-DAQmx\NIDAQmx.lib" />
+    <Library Include="..\lib\quickDAQ\bin\win32\quickDAQ.lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\lib\quickDAQ\bin\win32\quickDAQ.pdb" />
   </ItemGroup>
 </Project>
