@@ -39,7 +39,7 @@ unsigned muscle_mtr_en [16][2]		=  {{2, 0},  // Muscle Channel 0
 										{2,22},  // Muscle Channel 14
 										{2,23}}; // Muscle Channel 15
 
-unsigned muscle_enc_org [8][2]		=  {{3, 0},  // Muscle Channel 0
+unsigned muscle_enc_ring [8][2]		=  {{3, 0},  // Muscle Channel 0
 										{3, 1},  // Muscle Channel 1
 										{3, 2},  // Muscle Channel 2
 										{3, 3},  // Muscle Channel 3
@@ -48,7 +48,7 @@ unsigned muscle_enc_org [8][2]		=  {{3, 0},  // Muscle Channel 0
 										{3, 6},  // Muscle Channel 6
 										{3, 7}}; // Muscle Channel 7
 
-unsigned muscle_enc_alt [8][2]		=  {{7, 0},  // Muscle Channel 0
+unsigned muscle_enc_kleo [8][2]		=  {{7, 0},  // Muscle Channel 0
 										{7, 1},  // Muscle Channel 1
 										{7, 2},  // Muscle Channel 2
 										{7, 3},  // Muscle Channel 3
@@ -94,16 +94,16 @@ unsigned muscle_ld_cell [8][2]		=  {{7, 0},  // Muscle Channel 0
 
 int T5_quickDAQstatus = 0;
 
-typedef enum _encoderArrangement
+typedef enum _DAQarrangement
 {
 	RING_OF_FIRE	= 0,
 	QUADRUPED		= 1,
 	MUSCLE_MODULE	= 2
-}encoderArrangement;
+}DAQarrangement;
 
-class muscle {
+class T5muscle {
 	unsigned channelID;
-	encoderArrangement myEncoderArrangement;
+	DAQarrangement myDAQarrangement;
 
 	unsigned (*motor_enable_config)[2];
 	unsigned (*motor_value_config)[2];
@@ -119,7 +119,7 @@ class muscle {
 	double current_muscleTension;
 
 public:
-	muscle(unsigned muscleChannel, const encoderArrangement myEncoderArrangement);
+	T5muscle(unsigned muscleChannel, const DAQarrangement myDAQarrangement);
 	
 	void	enable();
 	void	setMuscleTone(double myMuscleTone_value);
@@ -132,6 +132,15 @@ public:
 	double	getMuscleTension();
 
 	void disable();
+};
+
+class T5encoder {
+	T5encoder();
+};
+
+
+class T5control {
+	T5control();
 };
 
 #endif // !T5CONTROL
